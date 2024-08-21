@@ -1,0 +1,426 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/phone"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/img_notification0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications0"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications1"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications2"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications3"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications4"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications5"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <ImageView
+        android:id="@+id/img_notification6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notifications6"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@id/main_constraint"
+        app:layout_constraintStart_toStartOf="@id/main_constraint"
+        app:layout_constraintTop_toTopOf="@id/main_constraint" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_constraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications0"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/subscriber_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akrobat_bold"
+                android:text="Контакт"
+                android:textColor="#80FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toTopOf="@id/contact_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/accept_btn" />
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akrobat_bold"
+                android:text="Sasha asdfasdfasdf"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintBottom_toBottomOf="@id/accept_btn"
+                app:layout_constraintEnd_toStartOf="@id/accept_btn"
+                app:layout_constraintStart_toStartOf="@id/subscriber_tv"
+                app:layout_constraintTop_toBottomOf="@id/subscriber_tv" />
+
+            <ImageView
+                android:id="@+id/accept_btn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginVertical="12dp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:src="@drawable/ic_accept"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/subscriber_tv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/reject_btn1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/reject_btn1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_reject"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications1"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:text="Контакт"
+                android:textColor="#80FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/reject_btn2" />
+
+            <TextView
+                android:id="@+id/time_of_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:paddingEnd="12dp"
+                android:text="5:43"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/reject_btn2"
+                app:layout_constraintStart_toStartOf="@id/contact"
+                app:layout_constraintTop_toBottomOf="@id/contact" />
+
+            <ImageView
+                android:id="@+id/reject_btn2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:src="@drawable/ic_reject"
+                android:layout_marginTop="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/time_of_call"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications2"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/message_ic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_massage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:text="Alexsey Magomedovich"
+                android:textColor="#80FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/message"
+                app:layout_constraintStart_toEndOf="@id/message_ic"
+                app:layout_constraintTop_toTopOf="@id/message_ic" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="15dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/akrobat_bold"
+                android:maxLines="1"
+                android:text="Привет друг, как твои дела? Что делаешь?"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/message_ic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/sender"
+                app:layout_constraintTop_toBottomOf="@id/sender" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications3"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_doctor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25sp"
+                android:src="@drawable/ic_doctor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akrobat_bold"
+                android:paddingVertical="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="Поступил новый заказ"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_doctor"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications4"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_taxi"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/ic_taxi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:paddingVertical="23dp"
+                android:text="Поступил новый заказ"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_taxi"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications5"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_mechanic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/ic_mechanic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:paddingVertical="23dp"
+                android:text="Поступил новый заказ"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_mechanic"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notifications6"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_police"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:src="@drawable/ic_police"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:paddingVertical="23dp"
+                android:text="Поступил новый заказ"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_police"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
