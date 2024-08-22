@@ -7,11 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.gamegtatest.databinding.ActivityMainBinding
+import com.example.gamegtatest.databinding.ApartmentInfoBinding
+import com.example.gamegtatest.databinding.HouseManagementBinding
 import com.example.gamegtatest.databinding.MenuApartmentBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private var binding: MenuApartmentBinding? = null
+    private var binding: HouseManagementBinding? = null
    // private lateinit var notificationState: NotificationState
 
     @SuppressLint("MissingInflatedId")
@@ -19,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = MenuApartmentBinding.inflate(layoutInflater)
+        binding = HouseManagementBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        binding?.menu?.let { mainView ->
+        binding?.houseManagement?.let { mainView ->
             ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
                 v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

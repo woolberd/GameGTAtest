@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basement_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8000000"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.75">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_wardrobe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.49">
+
+
+            <TextView
+                android:id="@+id/tv_wardrobe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="СТЕЛЛАЖ ДЛЯ ВЕЩЕЙ"
+                android:layout_margin="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/akrobat_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+20 СЛОТОВ"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textColor="#959595"
+                android:fontFamily="@font/akrobat_bold"
+                app:layout_constraintStart_toStartOf="@id/tv_wardrobe"
+                app:layout_constraintTop_toBottomOf="@id/tv_wardrobe"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_wardrobe"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_repair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/orange_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_wardrobe">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="КУПИТЬ"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/akrobat_bold"
+                    android:paddingVertical="10dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_crafting_workbench"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintStart_toEndOf="@id/constraint_wardrobe"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.49">
+
+
+            <TextView
+                android:id="@+id/tv_crafting_workbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ВЕРСТАК ДЛЯ КРАФТА"
+                android:layout_margin="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/akrobat_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_crafting_workbench"
+                android:layout_margin="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_rent_reduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/dark_grey_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_crafting_workbench">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ИМЕЕТСЯ"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/akrobat_bold"
+                    android:paddingVertical="10dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
