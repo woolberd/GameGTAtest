@@ -26,7 +26,8 @@
             android:background="@drawable/rounded_corners"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.49">
+            app:layout_constraintEnd_toStartOf="@id/constraint_crafting_workbench"
+            app:layout_constraintHorizontal_weight="0.37">
 
 
             <TextView
@@ -94,11 +95,12 @@
             android:id="@+id/constraint_crafting_workbench"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/rounded_corners"
             app:layout_constraintStart_toEndOf="@id/constraint_wardrobe"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.49">
+            app:layout_constraintHorizontal_weight="0.37">
 
 
             <TextView

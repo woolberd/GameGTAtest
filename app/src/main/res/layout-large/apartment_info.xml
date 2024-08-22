@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/apartment_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C8000000"
-    android:id="@+id/apartment_info"
     tools:ignore="MissingDefaultResource">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,9 +23,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toStartOf="@id/constraint_additional_information"
+            app:layout_constraintHorizontal_weight="0.35"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.32">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tv_num_of_apartment"
@@ -62,10 +63,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toStartOf="@id/constraint_additional_information"
+            app:layout_constraintHorizontal_weight="0.35"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/constraint_num"
-            app:layout_constraintWidth_percent="0.32">
+            app:layout_constraintTop_toBottomOf="@id/constraint_num">
 
             <TextView
                 android:id="@+id/tv_price_of_apartment"
@@ -109,10 +112,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toStartOf="@id/constraint_rent_type"
+            app:layout_constraintHorizontal_weight="0.35"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/constraint_price"
-            app:layout_constraintWidth_percent="0.32">
+            app:layout_constraintTop_toBottomOf="@id/constraint_price">
 
             <TextView
                 android:id="@+id/tv_door"
@@ -163,10 +168,11 @@
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/rounded_corners"
-            app:layout_constraintHeight_percent="0.65"
             app:layout_constraintStart_toEndOf="@id/constraint_num"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.28">
+            app:layout_constraintTop_toTopOf="@id/constraint_num"
+            app:layout_constraintBottom_toBottomOf="@id/constraint_price"
+            app:layout_constraintEnd_toStartOf="@id/constraint_class"
+            app:layout_constraintHorizontal_weight="0.3">
 
 
             <TextView
@@ -228,12 +234,14 @@
             android:id="@+id/constraint_rent_type"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/rounded_corners"
-            app:layout_constraintStart_toEndOf="@id/constraint_door"
-            app:layout_constraintTop_toBottomOf="@id/constraint_additional_information"
-            app:layout_constraintWidth_percent="0.28">
-
+            app:layout_constraintEnd_toStartOf="@id/constraint_tax"
+            app:layout_constraintHorizontal_weight="0.3"
+            app:layout_constraintStart_toEndOf="@id/constraint_num"
+            app:layout_constraintTop_toBottomOf="@id/constraint_additional_information">
 
             <TextView
                 android:id="@+id/tv_type_of_rent"
@@ -270,11 +278,12 @@
             android:id="@+id/constraint_class"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corners"
-            app:layout_constraintStart_toEndOf="@id/constraint_additional_information"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="10dp"
-            app:layout_constraintWidth_percent="0.37">
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.4"
+            app:layout_constraintStart_toEndOf="@id/constraint_additional_information"
+            app:layout_constraintTop_toTopOf="parent">
 
 
             <TextView
@@ -296,12 +305,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/akrobat_bold"
                 android:text="Средний"
                 android:textColor="#FFCD60"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_class" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -310,11 +319,13 @@
             android:id="@+id/constraint_tax"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.4"
             app:layout_constraintStart_toEndOf="@id/constraint_additional_information"
-            app:layout_constraintTop_toBottomOf="@id/constraint_class"
-            android:layout_margin="10dp"
-            app:layout_constraintWidth_percent="0.37">
+            app:layout_constraintTop_toBottomOf="@id/constraint_class">
 
 
             <TextView
@@ -336,12 +347,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/akrobat_bold"
                 android:text="1 500"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_tax" />
 
@@ -358,13 +369,13 @@
                 android:id="@+id/tax_deadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:fontFamily="@font/akrobat_bold"
                 android:text="/ день"
                 android:textColor="#80FFFFFF"
                 android:textSize="22sp"
-                android:layout_margin="5dp"
                 app:layout_constraintStart_toEndOf="@id/img_money"
-                app:layout_constraintTop_toBottomOf="@id/tv_tax"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_tax" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -372,11 +383,13 @@
             android:id="@+id/constraint_paid"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.4"
             app:layout_constraintStart_toEndOf="@id/constraint_additional_information"
-            app:layout_constraintTop_toBottomOf="@id/constraint_tax"
-            android:layout_margin="10dp"
-            app:layout_constraintWidth_percent="0.37">
+            app:layout_constraintTop_toBottomOf="@id/constraint_tax">
 
             <TextView
                 android:id="@+id/tv_paid"
@@ -397,12 +410,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/akrobat_bold"
                 android:text="16 д.н."
                 android:textColor="#68FD4B"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_paid" />
 
@@ -415,11 +428,11 @@
                 android:text="26.07.2025 15:07"
                 android:textColor="#80FFFFFF"
                 android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/number_of_days"/>
+                app:layout_constraintBottom_toBottomOf="@id/number_of_days"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
