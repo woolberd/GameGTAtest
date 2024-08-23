@@ -2,6 +2,8 @@ package com.example.gamegtatest
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,21 +18,24 @@ class MainActivity : AppCompatActivity() {
     private var binding: HouseManagementBinding? = null
    // private lateinit var notificationState: NotificationState
 
+
+    private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var houseManagementBinding: HouseManagementBinding
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = HouseManagementBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
+//        binding = HouseManagementBinding.inflate(layoutInflater)
+//        setContentView(binding?.root)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mainBinding.root)
 
-        binding?.houseManagement?.let { mainView ->
-            ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                insets
-            }
-        }
+        houseManagementBinding = HouseManagementBinding.inflate(layoutInflater)
+
+        val frameLayout: FrameLayout = mainBinding.frameLayout
+        frameLayout.addView(houseManagementBinding.root)
 
 //        notificationState = NotificationState(this, binding!!.root)
 //        notificationState.onCreateView()
