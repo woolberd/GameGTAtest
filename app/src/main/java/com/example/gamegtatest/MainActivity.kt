@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.gamegtatest.databinding.ActivityMainBinding
 import com.example.gamegtatest.databinding.ApartmentInfoBinding
+import com.example.gamegtatest.databinding.ApartmentManagementBinding
 import com.example.gamegtatest.databinding.HouseManagementBinding
 import com.example.gamegtatest.databinding.MenuApartmentBinding
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private lateinit var mainBinding: ActivityMainBinding
-    private lateinit var houseManagementBinding: HouseManagementBinding
+    private lateinit var houseManagementBinding: ApartmentInfoBinding
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        houseManagementBinding = HouseManagementBinding.inflate(layoutInflater)
+        houseManagementBinding = ApartmentInfoBinding.inflate(layoutInflater)
 
         val frameLayout: FrameLayout = mainBinding.frameLayout
         frameLayout.addView(houseManagementBinding.root)

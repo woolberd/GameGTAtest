@@ -6,7 +6,7 @@
     <solid android:color="#0DFFFFFF" />
 
     <!-- Set corner radius to make the layout rounded -->
-    <corners android:radius="10dp" />
+    <corners android:radius="5dp" />
 
     <!-- Optionally, add a stroke (border) -->
     <stroke
