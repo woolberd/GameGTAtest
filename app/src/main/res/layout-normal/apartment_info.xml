@@ -8,7 +8,6 @@
     android:background="#C8000000"
     tools:ignore="MissingDefaultResource">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_num"
         android:layout_width="0dp"
@@ -92,6 +91,7 @@
             android:layout_height="16sp"
             android:layout_margin="5dp"
             android:src="@drawable/ic_coin"
+            app:layout_constraintBottom_toBottomOf="@id/price_of_apartment"
             app:layout_constraintStart_toEndOf="@id/price_of_apartment"
             app:layout_constraintTop_toTopOf="@id/price_of_apartment" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -336,7 +336,6 @@
         app:layout_constraintStart_toEndOf="@id/constraint_additional_information"
         app:layout_constraintTop_toBottomOf="@id/constraint_class">
 
-
         <TextView
             android:id="@+id/tv_tax"
             android:layout_width="wrap_content"
@@ -370,7 +369,8 @@
             android:layout_margin="5dp"
             android:src="@drawable/ic_coin"
             app:layout_constraintStart_toEndOf="@id/tax"
-            app:layout_constraintTop_toTopOf="@id/tax" />
+            app:layout_constraintTop_toTopOf="@id/tax"
+            app:layout_constraintBottom_toBottomOf="@id/tax"/>
 
         <TextView
             android:id="@+id/tax_deadline"
@@ -438,7 +438,6 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@id/number_of_days"
             app:layout_constraintEnd_toEndOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
