@@ -18,7 +18,7 @@ import com.example.gamegtatest.databinding.TransportInfoBinding
 
 class MainActivity : AppCompatActivity() {
 
-   // private lateinit var notificationState: NotificationState
+    // private lateinit var notificationState: NotificationState
     private lateinit var mainBinding: ActivityMainBinding
     private lateinit var adapterTransport: TransportAdapter
     private lateinit var binding: TransportInfoBinding
@@ -43,8 +43,6 @@ class MainActivity : AppCompatActivity() {
 
         adapterTransport.submitList(transportListFromBackend)
         mainBinding.frameLayout.addView(binding.root)
-//        val frameLayout: FrameLayout = mainBinding.frameLayout
-//        frameLayout.addView(houseManagementBinding.root)
 
 //        notificationState = NotificationState(this, binding!!.root)
 //        notificationState.onCreateView()
@@ -56,7 +54,9 @@ class MainActivity : AppCompatActivity() {
             TransportModel(id = TransportType.BY.value),
             TransportModel(id = TransportType.RUS.value),
             TransportModel(id = TransportType.AM.value),
-            TransportModel(id = TransportType.UA.value)
+            TransportModel(id = TransportType.UA.value),
+            TransportModel(id = TransportType.GE.value),
+            TransportModel(id = TransportType.AZ.value)
         )
 
         return response

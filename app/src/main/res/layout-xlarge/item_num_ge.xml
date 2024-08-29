@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/background_number"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ua_car_num_background"
+        app:layout_constraintBottom_toBottomOf="@id/car_number_details"
+        app:layout_constraintEnd_toEndOf="@id/car_number_details"
+        app:layout_constraintStart_toStartOf="@id/car_number_details"
+        app:layout_constraintTop_toTopOf="@id/car_number_details" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/car_number_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/country_initials_ge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="GE"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flag_ge" />
+
+        <ImageView
+            android:id="@+id/flag_ge"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginTop="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/flag_ge"
+            app:layout_constraintBottom_toTopOf="@id/country_initials_ge"
+            app:layout_constraintEnd_toEndOf="@id/country_initials_ge"
+            app:layout_constraintStart_toStartOf="@id/country_initials_ge"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/num_digits_ge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="3dp"
+            android:fontFamily="@font/akrobat_bold"
+            android:textColor="@color/black"
+            android:textSize="21.5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/country_initials_ge"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ZZ-856-PP" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,5 +5,7 @@ enum class TransportType (val value: Int) {
     BY(1),
     RUS(2),
     AM(3),
-    UA(4)
+    UA(4),
+    GE(5),
+    AZ(6)
 }
