@@ -5,7 +5,6 @@
     android:id="@+id/apartment_management"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C8000000"
     tools:ignore="MissingDefaultResource">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +36,7 @@
                 android:text="ДОСТАВИТЬ"
                 app:layout_constraintHorizontal_bias="0.5"
                 android:textColor="#80FFFFFF"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +64,7 @@
                 android:text="ИНФОРМАЦИЯ"
                 app:layout_constraintHorizontal_bias="0.5"
                 android:textColor="#80FFFFFF"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +91,7 @@
                 android:fontFamily="@font/akrobat_bold"
                 android:text="ПРОДАТЬ"
                 android:textColor="#80FFFFFF"
-                android:textSize="16sp"
+                android:textSize="13sp"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

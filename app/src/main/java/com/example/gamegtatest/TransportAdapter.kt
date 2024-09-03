@@ -47,7 +47,7 @@ class TransportAdapter(
                         TransportType.KZ -> {
                             val kzBinding =
                                 ItemNumKzBinding.inflate(inflater, binding.frameLayout, false)
-                            kzBinding.numDigitsKz.text = "777xxx"
+                            kzBinding.numDigitsKz.text = "777XXX"
                             kzBinding.root
                         }
 
@@ -75,7 +75,7 @@ class TransportAdapter(
                         TransportType.UA -> {
                             val uaBinding =
                                 ItemNumUaBinding.inflate(inflater, binding.frameLayout, false)
-                            uaBinding.numDigitsUa.text = "AK 1234 B"
+                            uaBinding.numDigitsUa.text = "AK 1234 AB"
                             uaBinding.root
                         }
 
@@ -96,7 +96,7 @@ class TransportAdapter(
                         else -> null
                     }
 
-                    view?.let { binding.frameLayout.addView(it) }
+                    view?.let { binding.frameLayout?.addView(it) }
                 }
 
 

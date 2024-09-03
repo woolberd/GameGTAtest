@@ -5,7 +5,6 @@
     android:id="@+id/apartment_management"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C8000000"
     tools:ignore="MissingDefaultResource">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/_13sdp"
+            android:paddingVertical="@dimen/_12sdp"
             android:background="@drawable/dark_grey_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_information"
@@ -48,7 +47,7 @@
             android:id="@+id/btn_information"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/_13sdp"
+            android:paddingVertical="@dimen/_12sdp"
             android:layout_margin="@dimen/_5sdp"
             android:background="@drawable/dark_grey_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +76,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_5sdp"
-            android:paddingVertical="@dimen/_13sdp"
+            android:paddingVertical="@dimen/_12sdp"
             android:background="@drawable/dark_grey_gradient"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

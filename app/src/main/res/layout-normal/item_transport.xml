@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2F000000"
+        android:background="#00000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,11 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/akrobat_bold"
             android:text="Koenigsegg CC850"
             android:textColor="@color/white"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/img_car_constraint" />
 
@@ -33,15 +33,15 @@
             android:id="@+id/img_car_constraint"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/image_car"
-                android:layout_width="@dimen/_80sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginVertical="@dimen/_10sdp"
                 android:src="@drawable/test_car"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
                     android:fontFamily="@font/akrobat_bold"
                     android:text="15д."
                     android:textColor="@color/white"
-                    android:textSize="8sp"
+                    android:textSize="6sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,12 +75,14 @@
 
         <FrameLayout
             android:id="@+id/frame_layout"
-            android:layout_width="@dimen/_52sdp"
-            android:layout_height="@dimen/_15sdp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_13sdp"
             android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_110sdp"
             android:adjustViewBounds="true"
             app:layout_constraintBottom_toBottomOf="@id/img_car_constraint"
             app:layout_constraintStart_toStartOf="@id/car_brand"
+            app:layout_constraintEnd_toStartOf="@id/img_car_constraint"
             app:layout_constraintTop_toBottomOf="@id/car_brand" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
