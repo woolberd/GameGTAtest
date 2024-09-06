@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     // private lateinit var notificationState: NotificationState
     private lateinit var mainBinding: ActivityMainBinding
-    private lateinit var adapterTransport: TransportAdapter
-    private lateinit var binding: TransportInfoBinding
+  //  private lateinit var adapterTransport: TransportAdapter
+    //private lateinit var binding: MainStatisticsBinding
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +31,27 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        if (savedInstanceState == null) {
+            // Создаем экземпляр фрагмента
+            val myFragment = MainStatisticsFragment()
 
-        binding = TransportInfoBinding.inflate(layoutInflater)
-        adapterTransport = TransportAdapter { selectedItem ->
-            adapterTransport.updateSelectedItem(selectedItem)
-            updateButtonBackgrounds(selectedItem)
+            // Осуществляем транзакцию фрагмента
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.main, myFragment)
+                .commit()
         }
-        binding.recyclerTransport.adapter = adapterTransport
 
-        val transportListFromBackend = getTransportDataFromBackend()
-
-        adapterTransport.submitList(transportListFromBackend)
-        mainBinding.frameLayout.addView(binding.root)
+       // binding = MainStatisticsBinding.inflate(layoutInflater)
+//        adapterTransport = TransportAdapter { selectedItem ->
+//            adapterTransport.updateSelectedItem(selectedItem)
+//            updateButtonBackgrounds(selectedItem)
+//        }
+//        binding.recyclerTransport.adapter = adapterTransport
+//
+//        val transportListFromBackend = getTransportDataFromBackend()
+//
+//        adapterTransport.submitList(transportListFromBackend)
+//        mainBinding.frameLayout.addView(binding.root)
 
 //        notificationState = NotificationState(this, binding!!.root)
 //        notificationState.onCreateView()
@@ -63,22 +72,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateButtonBackgrounds(selectedItem: TransportModel?) {
-        if (selectedItem != null) {
-            binding.btnDeliver.setBackgroundResource(R.drawable.blue_gradient)
-            binding.btnInformation.setBackgroundResource(R.drawable.light_gray_gradient)
-            binding.btnSell.setBackgroundResource(R.drawable.red_gradient)
-
-            binding.tvSell?.setTextColor(Color.WHITE)
-            binding.tvDeliver?.setTextColor(Color.WHITE)
-            binding.tvInformation?.setTextColor(Color.WHITE)
-        } else {
-            binding.btnDeliver.setBackgroundResource(R.drawable.dark_grey_gradient)
-            binding.btnInformation.setBackgroundResource(R.drawable.dark_grey_gradient)
-            binding.btnSell.setBackgroundResource(R.drawable.dark_grey_gradient)
-
-            binding.tvSell?.setTextColor(Color.GRAY)
-            binding.tvDeliver?.setTextColor(Color.GRAY)
-            binding.tvInformation?.setTextColor(Color.GRAY)
-        }
+//        if (selectedItem != null) {
+//            binding.btnDeliver.setBackgroundResource(R.drawable.blue_gradient)
+//            binding.btnInformation.setBackgroundResource(R.drawable.light_gray_gradient)
+//            binding.btnSell.setBackgroundResource(R.drawable.red_gradient)
+//
+//            binding.tvSell?.setTextColor(Color.WHITE)
+//            binding.tvDeliver?.setTextColor(Color.WHITE)
+//            binding.tvInformation?.setTextColor(Color.WHITE)
+//        } else {
+//            binding.btnDeliver.setBackgroundResource(R.drawable.dark_grey_gradient)
+//            binding.btnInformation.setBackgroundResource(R.drawable.dark_grey_gradient)
+//            binding.btnSell.setBackgroundResource(R.drawable.dark_grey_gradient)
+//
+//            binding.tvSell?.setTextColor(Color.GRAY)
+//            binding.tvDeliver?.setTextColor(Color.GRAY)
+//            binding.tvInformation?.setTextColor(Color.GRAY)
+//        }
     }
 }

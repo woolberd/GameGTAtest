@@ -34,7 +34,7 @@
             android:layout_marginBottom="7dp"
             android:fontFamily="@font/akrobat_bold"
             android:text="BY"
-            android:textColor="@color/black"
+            android:textColor="#137B03"
             android:textSize="5sp"
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
