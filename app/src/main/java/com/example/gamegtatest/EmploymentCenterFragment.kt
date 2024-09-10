@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gamegtatest.databinding.FragmentEmploymentCenterBinding
 
 class EmploymentCenterFragment : Fragment() {
@@ -29,6 +30,7 @@ class EmploymentCenterFragment : Fragment() {
 
         binding.recycler.adapter = adapterCenter
 
+        requireContext().checkScreenSizeAndSetDecoration("EmploymentCenter", view, binding.recycler)
         val exampleData = listOf(
             EmploymentCenterModel(1),
             EmploymentCenterModel(2),

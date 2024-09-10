@@ -1,18 +1,24 @@
 package com.example.gamegtatest
 
+import android.content.Context
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamegtatest.databinding.ItemEmploymentCenterBinding
+import com.google.android.material.divider.MaterialDividerItemDecoration
 
 class EmploymentCenterAdapter :
     ListAdapter<EmploymentCenterModel, EmploymentCenterAdapter.ViewHolder>(diffUtil) {
 
     class ViewHolder(private val binding: ItemEmploymentCenterBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(dataItem: EmploymentCenterModel?) {}
+        fun onBind(dataItem: EmploymentCenterModel?) {
+
+
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
