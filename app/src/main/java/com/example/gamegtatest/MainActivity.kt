@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             // Создаем экземпляр фрагмента
-            val myFragment = MainStatisticsFragment()
+            val myFragment = EmploymentCenterFragment()
 
             // Осуществляем транзакцию фрагмента
             supportFragmentManager.beginTransaction()
