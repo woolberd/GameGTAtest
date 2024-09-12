@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DeathFragment"
+    android:background="#CC111111"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonWait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:background="@drawable/button_state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLoseConsciousness"
+        app:layout_constraintHorizontal_chainStyle="packed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ОЖИДАТЬ МЕДИКОВ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingVertical="@dimen/_10sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonLoseConsciousness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:background="@drawable/button_state"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:layout_constraintStart_toEndOf="@id/buttonWait"
+        android:layout_marginStart="@dimen/_2sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ПОТЕРЯТЬ СОЗНАНИЕ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="#80FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingVertical="@dimen/_10sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/calls_an_ambulance_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akrobat_bold"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Вызывает врача скорой помощи"
+        app:layout_constraintStart_toStartOf="@id/buttonWait"
+        app:layout_constraintEnd_toEndOf="@id/buttonWait"
+        app:layout_constraintTop_toBottomOf="@id/buttonWait"/>
+
+    <TextView
+        android:id="@+id/sends_you_to_the_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akrobat_bold"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Отправляет вас в больницу"
+        app:layout_constraintStart_toStartOf="@id/buttonLoseConsciousness"
+        app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness"
+        app:layout_constraintTop_toBottomOf="@id/buttonLoseConsciousness"/>
+
+    <TextView
+        android:id="@+id/tv_you_have_been_seriously_injured."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_8sdp"
+        android:fontFamily="@font/akrobat_bold"
+        android:textColor="@color/white"
+        android:text="Вы получили серьёзное ранение"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="@id/buttonWait"
+        app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness"
+        app:layout_constraintBottom_toTopOf="@id/timer_container"/>
+
+
+    <TextView
+        android:id="@+id/tv_you_died"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_22sdp"
+        android:fontFamily="@font/akrobat_bold"
+        android:textColor="@color/white"
+        android:text="ВЫ ПОГИБЛИ"
+        app:layout_constraintStart_toStartOf="@id/buttonWait"
+        app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness"
+        app:layout_constraintBottom_toTopOf="@id/tv_you_have_been_seriously_injured."/>
+
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/die"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/tv_you_died"
+        app:layout_constraintStart_toStartOf="@id/tv_you_died"
+        app:layout_constraintEnd_toEndOf="@id/tv_you_died"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_killer_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="@id/buttonWait"
+        app:layout_constraintTop_toBottomOf="@id/tv_killer"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness">
+        
+        
+        <ImageView
+            android:id="@+id/img_killer_background"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/died_background_img"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/killer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/killer_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_killer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/akrobat_bold"
+        android:textColor="@color/white"
+        android:text="Убийца"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/buttonWait"
+        app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/constraint_killer_data"
+        app:layout_constraintEnd_toEndOf="@id/constraint_killer_data"
+        app:layout_constraintTop_toBottomOf="@id/constraint_killer_data">
+
+
+        <TextView
+            android:id="@+id/tv_shooting_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_8sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:textColor="@color/white"
+            android:text="Расстояние: 3м"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_weapon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:textColor="@color/white"
+            android:text="AK-47"
+            app:layout_constraintEnd_toEndOf="@id/tv_shooting_distance"
+            app:layout_constraintStart_toStartOf="@id/tv_shooting_distance"
+            app:layout_constraintBottom_toTopOf="@id/tv_shooting_distance"/>
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/tv_weapon"
+            app:layout_constraintEnd_toStartOf="@id/tv_shooting_distance"
+            android:src="@drawable/weapon"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shooting_distance"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/timer_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/red_gradient"
+        android:layout_marginStart="@dimen/_minus8sdp"
+        android:layout_marginEnd="@dimen/_minus8sdp"
+        app:layout_constraintTop_toTopOf="@id/timer_logo"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_minus3sdp"
+        android:layout_marginTop="@dimen/_minus3sdp"
+        app:layout_constraintStart_toStartOf="@id/timer_logo"
+        app:layout_constraintEnd_toEndOf="@id/timer_text"
+        app:layout_constraintBottom_toBottomOf="@id/timer_logo"/>
+
+        <ImageView
+            android:id="@+id/timer_logo"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@id/timer_text"
+            app:layout_constraintTop_toTopOf="@id/buttonLoseConsciousness"
+            app:layout_constraintBottom_toTopOf="@id/buttonLoseConsciousness"
+            app:layout_constraintStart_toStartOf="@id/buttonLoseConsciousness"
+            android:src="@drawable/ic_timer" />
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02:34"
+            android:layout_marginStart="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="@id/buttonLoseConsciousness"
+            app:layout_constraintStart_toEndOf="@id/timer_logo"
+            app:layout_constraintBottom_toTopOf="@id/buttonLoseConsciousness"
+            app:layout_constraintEnd_toEndOf="@id/buttonLoseConsciousness"
+            android:fontFamily="@font/akrobat_bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_8sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
