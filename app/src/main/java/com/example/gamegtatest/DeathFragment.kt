@@ -12,8 +12,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.doOnPreDraw
+import androidx.core.view.postDelayed
 import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import com.example.gamegtatest.databinding.FragmentDeathBinding
 
 class DeathFragment : Fragment() {
@@ -47,26 +50,59 @@ class DeathFragment : Fragment() {
 
         binding.timerContainer?.doOnPreDraw {
             val cacheWidth = binding.timerContainer?.width
-            binding.timerContainer?.updateLayoutParams<ConstraintLayout.LayoutParams> {
-                width = cacheWidth!!.toInt()
-            }
-        }
-        val margin1 =  (binding.timerLogo!!.x - binding.timerContainer!!.x).toInt()
+            val cacheHeight = binding.timerContainer?.height
 
-        binding.timerText?.doOnPreDraw {
-            val cacheWidth = binding.timerText?.width
-            binding.timerText?.updateLayoutParams<ConstraintLayout.LayoutParams> {
-                startToEnd = ConstraintLayout.LayoutParams.UNSET
-                marginStart = (binding.timerLogo!!.x - binding.timerContainer!!.x).toInt()
+            val x3 = binding.timerContainer!!.x
+            val y3 = binding.timerContainer!!.y
+
+            val params3 = ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT
+            ).apply {
+                width = cacheWidth!!
+                height = cacheHeight!!
+                topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                startToStart = ConstraintLayout.LayoutParams.PARENT_ID
             }
-        }
-        binding.timerLogo?.doOnPreDraw {
-            val cacheWidth = binding.timerLogo?.width
-            binding.timerLogo?.updateLayoutParams<ConstraintLayout.LayoutParams> {
-                endToStart = ConstraintLayout.LayoutParams.UNSET
-                marginStart = (binding.timerLogo!!.x - binding.timerContainer!!.x).toInt()
+
+            binding.timerContainer!!.layoutParams = params3
+            binding.timerContainer!!.translationX = x3
+            binding.timerContainer!!.translationY = y3
+
+            val x1 = binding.timerText!!.x
+            val y1 = binding.timerText!!.y
+
+            val x2 = binding.timerLogo!!.x
+            val y2 = binding.timerLogo!!.y
+
+            val params1 = ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.WRAP_CONTENT,
+                ConstraintLayout.LayoutParams.WRAP_CONTENT
+            ).apply {
+                topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                startToStart = ConstraintLayout.LayoutParams.PARENT_ID
             }
+
+            val testWidth = binding.timerLogo!!.width
+            val testHeight = binding.timerLogo!!.height
+
+            val params2 = ConstraintLayout.LayoutParams(
+                testWidth,
+                testHeight
+            ).apply {
+                topToTop = ConstraintLayout.LayoutParams.PARENT_ID
+                startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+            }
+
+            binding.timerLogo!!.layoutParams = params2
+            binding.timerLogo!!.translationX = x2
+            binding.timerLogo!!.translationY = y2
+
+            binding.timerText!!.layoutParams = params1
+            binding.timerText!!.translationX = x1
+            binding.timerText!!.translationY = y1
         }
+
     }
 
 
