@@ -24,6 +24,8 @@ class DeathFragment : Fragment() {
     private var _binding: FragmentDeathBinding? = null
     private val binding get() = _binding!!
     private var timerDuration: Long = 180000
+    private var countdownTimer: CountDownTimer? = null
+    private var remainingTime = timerDuration
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,16 +39,25 @@ class DeathFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.timerContainer?.visibility = View.INVISIBLE
+        binding.timerLogo?.visibility = View.INVISIBLE
+        binding.timerText?.visibility = View.INVISIBLE
+
         binding.buttonWait?.setOnClickListener {
-            binding.buttonWait?.isEnabled = true
+            startCountdownTimer(timerDuration)
+            binding.buttonWait?.isEnabled = false
+            binding.buttonLoseConsciousness?.isEnabled = false
+            binding.timerContainer?.visibility = View.VISIBLE
+            binding.timerLogo?.visibility = View.VISIBLE
+            binding.timerText?.visibility = View.VISIBLE
+            binding.tvWaitDoctor?.isEnabled = false
+            binding.tvLoseConsciousness?.isEnabled = false
         }
 
         binding.buttonLoseConsciousness?.setOnClickListener {
             binding.buttonLoseConsciousness?.isEnabled = false
+            binding.tvLoseConsciousness?.isEnabled = false
         }
-
-        setOutlinedText(binding.killerLevel, "ур. 32", 5f, Color.BLACK, Color.WHITE)
-        setOutlinedText(binding.killerName, "Yan Magamedovich", 5f, Color.BLACK, Color.WHITE)
 
         binding.timerContainer?.doOnPreDraw {
             val cacheWidth = binding.timerContainer?.width
@@ -107,42 +118,27 @@ class DeathFragment : Fragment() {
 
 
     private fun startCountdownTimer(timeInMillis: Long) {
-        object : CountDownTimer(timeInMillis, 1000) {
+        countdownTimer?.cancel()
+        countdownTimer = object : CountDownTimer(timeInMillis, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                // Обновляем текст таймера каждую секунду
+                remainingTime = millisUntilFinished
                 val minutes = (millisUntilFinished / 1000) / 60
                 val seconds = (millisUntilFinished / 1000) % 60
                 binding.timerText?.text = String.format("%02d:%02d", minutes, seconds)
             }
 
             override fun onFinish() {
-                // Действие, когда таймер закончится
+                remainingTime = 0
                 binding.timerText?.text = "00:00"
             }
 
         }.start()
     }
 
-    private fun setOutlinedText(view: TextView?, text: String, outlineWidth: Float, outlineColor: Int, fillColor: Int) {
-        view?.let {
-            val spannableString = SpannableString(text)
-            spannableString.setSpan(
-                OutlineSpan(outlineWidth, outlineColor, fillColor),
-                0, text.length,
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-
-            it.text = spannableString
-            it.invalidate()
-        } ?: run {
-            Log.e("DeathFragment", "${view?.id} is null")
-        }
-    }
-
-
     override fun onDestroyView() {
         super.onDestroyView()
+        countdownTimer?.cancel()
         _binding = null
     }
 }
