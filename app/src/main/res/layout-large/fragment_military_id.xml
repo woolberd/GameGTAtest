@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MilitaryIDFragment"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/close_button"
+        app:layout_constraintStart_toEndOf="@id/frame_layout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:background="@drawable/background_military_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.35">
+
+        <TextView
+            android:id="@+id/tv_military_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="ВОЕННЫЙ БИЛЕТ"
+            android:textColor="#3A3835"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/num_of_military_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:letterSpacing="0.2"
+            android:text="&#8470;1234567"
+            android:textColor="#9F2C3B"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_military_id" />
+
+        <TextView
+            android:id="@+id/tv_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ФАМИЛИЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@id/person_surname"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/num_of_military_id" />
+
+        <TextView
+            android:id="@+id/person_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="MAGAMEDOVICH"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/tv_surname"
+            app:layout_constraintTop_toTopOf="@id/tv_surname" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ИМЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_surname" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="GREGORIY"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ПОЛ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/person_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="МУЖСКОЙ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_gender" />
+
+        <TextView
+            android:id="@+id/tv_issued_by_the_military_commissariat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ВЫДАН ВОЕННЫМ КОМИССАРИАТОМ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender" />
+
+        <TextView
+            android:id="@+id/tv_region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="МОСКОВСКАЯ ОБЛАСТЬ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_issued_by_the_military_commissariat"
+            app:layout_constraintTop_toBottomOf="@id/tv_issued_by_the_military_commissariat" />
+
+        <TextView
+            android:id="@+id/tv_validity_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="СРОК ДЕЙСТВИЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/person_validity_period"
+            app:layout_constraintEnd_toEndOf="@id/person_validity_period" />
+
+        <TextView
+            android:id="@+id/person_validity_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="30 Д.Н."
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/tv_military_commissar"
+            app:layout_constraintEnd_toEndOf="@id/tv_military_commissar" />
+
+        <TextView
+            android:id="@+id/tv_military_commissar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ВОЕННЫЙ КОМИССАР"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/tv_job_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_job_title" />
+
+        <TextView
+            android:id="@+id/tv_job_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="ПОДПОЛКОВНИК"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/tv_job_title"
+            app:layout_constraintDimensionRatio="14:16"
+            app:layout_constraintTop_toTopOf="@id/tv_validity_period"
+            app:layout_constraintStart_toStartOf="@id/tv_surname">
+
+            <ImageView
+                android:id="@+id/image_person"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_seal_blue"
+            app:layout_constraintEnd_toStartOf="@id/tv_validity_period"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintStart_toEndOf="@id/constraint_image"
+            app:layout_constraintTop_toTopOf="@id/tv_validity_period"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

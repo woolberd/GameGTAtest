@@ -4,41 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/container"
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/one"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="40sp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-
-<!--    <FrameLayout-->
-<!--        android:id="@+id/frame_layout"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/one"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/two"-->
-<!--        app:layout_constraintWidth_percent="0.75"/>-->
-
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/two"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="@dimen/_60sdp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

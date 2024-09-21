@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DriversLicenseFragment"
+    tools:ignore="MissingDefaultResource">
+
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:src="@drawable/close_button"
+        app:layout_constraintBottom_toTopOf="@id/frame_layout"
+        app:layout_constraintStart_toEndOf="@id/frame_layout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_60sdp"
+        android:background="@drawable/background_drivers_license"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.60">
+
+        <TextView
+            android:id="@+id/tv_drivers_license"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="ВОДИТЕЛЬСКОЕ УДОСТОВЕРЕНИЕ"
+            android:textColor="#A84E6A"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ФАМИЛИЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintEnd_toStartOf="@id/person_surname"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_drivers_license" />
+
+        <TextView
+            android:id="@+id/person_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="MAGAMEDOVICH"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_surname"
+            app:layout_constraintTop_toTopOf="@id/tv_surname" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ИМЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_surname" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="GREGORIY"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="ПОЛ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/person_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="МУЖСКОЙ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_gender" />
+
+        <TextView
+            android:id="@+id/tv_validity_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="СРОК ДЕЙСТВИЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender" />
+
+        <TextView
+            android:id="@+id/person_validity_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="30 Д.Н."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_validity_period"
+            app:layout_constraintTop_toBottomOf="@id/tv_validity_period" />
+
+        <TextView
+            android:id="@+id/tv_place_of_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="МЕСТО ВЫДАЧИ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/person_validity_period" />
+
+        <TextView
+            android:id="@+id/person_place_of_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akrobat_extra_bold"
+            android:text="МОСКОВСКАЯ ОБЛАСТЬ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_place_of_issue"
+            app:layout_constraintTop_toBottomOf="@id/tv_place_of_issue" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/akrobat_bold"
+            android:text="КАТЕГОРИЯ"
+            android:textColor="#55486B"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tv_surname"
+            app:layout_constraintTop_toBottomOf="@id/person_place_of_issue" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tv_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_category">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/drivers_category_bike" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/drivers_category_car" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/drivers_category_truck" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/drivers_category_bus" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/background_drivers_license_photo"
+            app:layout_constraintBottom_toBottomOf="@id/tv_category"
+            app:layout_constraintDimensionRatio="12:16"
+            app:layout_constraintEnd_toStartOf="@id/tv_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_surname">
+
+            <ImageView
+                android:id="@+id/image_person"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_seal"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_place_of_issue"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
