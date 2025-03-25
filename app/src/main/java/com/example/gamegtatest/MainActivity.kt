@@ -32,10 +32,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
 
         if (savedInstanceState == null) {
-            // Создаем экземпляр фрагмента
+
             val myFragment = EmploymentCenterFragment()
 
-            // Осуществляем транзакцию фрагмента
             supportFragmentManager.beginTransaction()
                 .replace(R.id.main, myFragment)
                 .commit()
